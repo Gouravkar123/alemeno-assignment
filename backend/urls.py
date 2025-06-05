@@ -16,9 +16,14 @@ Including another URLconf
 """
 
 from django.contrib import admin
-from django.urls import path, include  # <-- add include
+from django.http import HttpResponse
+from django.urls import path, include
+
+def home(request):
+    return HttpResponse("Welcome to Credit Approval API")
 
 urlpatterns = [
+    path('', home),  # root path
     path('admin/', admin.site.urls),
-    path('api/', include('credit_approval.urls')),  # <-- include your app URLs under /api/
+    path('api/', include('credit_approval.urls')),
 ]
