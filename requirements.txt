@@ -1,0 +1,10 @@
+Django>=4.2
+djangorestframework
+gunicorn
+psycopg2-binary
+celery
+pandas
+openpyxl
+pytest
+pytest-django
+django-celery-results
